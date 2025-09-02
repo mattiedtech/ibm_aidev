@@ -7,35 +7,35 @@ const employees = [
 //Function to diplay all employees
 function displayEmployees () {
     const totalEmployees = employees
-        .map(employee => '<p>${employee.id}: - ${employee.name} - ${employee.department} - $${employee.salary}</p>')
+        .map(employee => `<p>${employee.id}: - ${employee.name} - ${employee.department} - $${employee.salary}</p>`)
         .join('');
     document.getElementById('employeeDetails').innerHTML = totalEmployees;
 }
 
 function calculateTotalSalaries() {
     const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
-    alert('Total Salaries: $${totalSalaries}');
+    alert(`Total Salaries: $${totalSalaries}`);
 }
 
 function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
-    const hrEmployeesDisplay = hrEmployees.map((employee, index) => '<p>${employeee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>').join('');
-    document.getElementById('employeeDeetails').innerHTML = hrEmployeesDisplay;
+    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+    document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
 
 function findEmployeeById(employeeId) {
     const foundEmployee = employees.find(employee => employee.id === employeeId);
         if (foundEmployee) {
-        document.getElementById('employeesDetails').innerHTML = '<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>';
+        document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
         }
         else{
         document.getElementById('employeesDetails').innerHTML = 'no employee found with this ID';
         }
 }
 function findEmployeeBySpecialization(employeeSpecialization) {
-    const foundEmployee = employees.find(employee => employee.specialization === Javascript);
+    const foundEmployee = employees.find(employee => employee.specialization === employeeSpecialization);
         if (foundEmployee) {
-            document.getElementById('employeesDetails').innerHTML = '<p>${foundEmployee.specialization}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - ${foundEmployee.specialization}</p>';
+            document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.specialization}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - ${foundEmployee.specialization}</p>`;
         }
         else{
             document.getElementById('employeesDetails').innerHTML = 'no employee found with this Specialization';
