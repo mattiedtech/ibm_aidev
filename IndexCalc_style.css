@@ -1,0 +1,22 @@
+body {
+    background-color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+h1{
+    color:grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer{
+    text-align: center;
+    font-size: x-small;
+}
+.maindiv {
+    background-color: whitesmoke;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
